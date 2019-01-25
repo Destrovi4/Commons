@@ -1,5 +1,7 @@
 package xyz.destr.math.field;
 
-public class Float2f {
+public interface Float2f {
+	
+	public float getFloat2f(float x, float y);
 	
 }
