@@ -15,5 +15,11 @@ public class MathFloat2x extends ProcessedFloat2x {
 	float processFloat(float value) {
 		return add + value * mult;
 	}
-
+	
+	public void scale(float currentMin, float currentMax, float targetMin, float targetMax) {
+		float normalDeltaByValueDelta = (targetMax - targetMin) / (currentMax - currentMin);
+		this.add = targetMin - currentMin * normalDeltaByValueDelta;
+		this.mult = normalDeltaByValueDelta;
+	}
+	
 }
